@@ -10,12 +10,10 @@ data= {
 }
 database = client["myinfo"]
 collection = database['sudh']
-collection.insert_one(data)
-
 record = collection.find()
 for i in record:
     print(i)
 
-
-
-
+data= collection.find({"name" : "sudh"})
+for i in data:
+    print(i)
